@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--====================================================-->
+    <!--  MI ESTILO   -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <!--====================================================-->
+
+    <title>INTEGRADOR  JAVASCRIPT - COMPRA DE TICKETS</title>
+  </head>
+
+
+<!--========================================================-->
+<!--   CUERPO   -->
+<!--========================================================-->
+
+  <body>
+    <h1>INTEGRADOR  JAVASCRIPT - COMPRA DE TICKETS</h1>
+
+
+    <!--====================================================-->
+    <!--        BARRA NAVEGACION        -->
+    <!--====================================================-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Codo a Codo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
+              <a class="nav-link" href="#">Los oradores</a>
+              <a class="nav-link" href="#">El lugar y la fecha</a>
+              <a class="nav-link" href="#">Convertite en orador</a>
+              <a class="nav-link text-warning fw-bold" href="#">Comprar tickets</a>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+  
+
+    <!--====================================================-->
+    <!--        DESCUENTO POR CATEGORIAS        -->
+    <!--====================================================-->
+
+    <div class="container w-50 mt-3 text-center">
+
+      <div class="card-group">
+        <!---------------------------------------------------->
+        <!-- Carta 1-->
+        <div class="card btn-outline-danger">
+          
+          <div class="card-body">
+            <h5 class="card-title">Estudiante</h5>
+            <p class="card-text">Tiene un descuento</p>
+            <p class="card-text">80%</p>
+
+          </div>
+          <div class="card-footer">
+            <small>*Presentar documentacion</small>
+          </div>
+        </div>
+        <!---------------------------------------------------->
+        <!-- Carta 2-->
+        <div class="card btn-outline-warning">
+          
+          <div class="card-body">
+            <h5 class="card-title">Trainee</h5>
+            <p class="card-text">Tiene un descuento</p>
+            <p class="card-text">50%</p>
+          </div>
+          <div class="card-footer">
+            <small>*Presentar documentacion</small>
+          </div>
+        </div>
+        <!---------------------------------------------------->
+        <!-- Carta 3-->
+        <div class="card btn-outline-success">
+          
+          <div class="card-body">
+            <h5 class="card-title">Junior</h5>
+            <p class="card-text">Tiene un descuento</p>
+            <p class="card-text">15%</p>
+          </div>
+          <div class="card-footer">
+            <small>*Presentar documentacion</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!--====================================================-->
+    <!--   VALOR TICKET             -->
+    <!--====================================================-->
+
+    <div class="container w-50 mt-3 text-warning bg-dark">
+
+      <div class="text-center">
+
+        <h3>VENTA</h3>
+        <h2>VALOR DE TICKET $200</h2>
+  
+      </div>
+
+    </div>
+    
+
+    <!--====================================================-->
+    <!--        FORMULARIO DATOS        -->
+    <!--====================================================-->
+
+    <div class="container w-50 mt-3">
+
+        <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" id="nombre">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name" id="apellido">
+            </div>
+        </div>
+
+    <!------------------------------------------------------->
+    <!--   EMAIL     -->
+        <div class="row mt-2">
+        
+            <div class="col">
+            <input type="email" class="form-control"  placeholder="Email" id="email">
+            </div>
+        </div>
+    
+    </div>
+    
+
+    <!--====================================================-->
+    <!--        COMPRA DE TICKETS       --> 
+    <!--====================================================-->
+
+
+    <div class="container w-50 mt-3">
+
+        <div class="row">
+
+            <div class="col">
+                <label>Cantidad</label>
+                <input placeholder="Cantidad" type="number" min="1" class="form-control" id="cantidadEntradas">
+              </div>
+<!------------------------------------------------------------------------------------------------------>          
+              <div class="col">
+                <label for="inputEmail4" class="form-label">Categoria</label>
+                <select id="categorias" class="form-select" aria-label="Default select example">
+                    <option value="seleccion-categoria">Seleccione su categoria</option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="trainee">Trainee</option>
+                    <option value="junior">Junior</option>
+                  </select>
+              </div>
+            </div>  
+
+        </div>
+    
+    </div>
+
+
+  <!-------------------------------------------------------->
+  <!--   RESUMEN PAGO   -->
+    <div  class="container w-50 mt-4 resumen-pago">
+        <p class="resumen-pago p-2" id="textoCambiar">Total a pagar: $</p>
+    </div>
+  <!--------------------------------------------------------->
+  <!--      BOTONES DE PAGO    -->
+
+  <div class="container w-50">
+
+    <div class="row">
+
+      <button type="reset" class="btn btn-secondary col me-1" onclick="borar()">Borrar</button>
+
+
+      <button type="button" id="botonCalcular" class="btn btn-success col ms-1" onclick="mostrarDatos()">Resumen pago</button>
+    </div>
+
+  </div>
+
+
+        
+    <!--====================================================-->
+    <!--        FOOTER        -->
+    <!--====================================================-->
+
+    
+    <footer class="mt-4">
+      <div class="container bg-primary text-white fs-6">
+        <div class="row row-cols-7">
+          <div class="col">
+            <p>Preguntas</p>
+            <p>frecuentes</p>
+          </div>
+          <div class="col">
+            <p>Contactanos</p>
+          </div>
+          <div class="col">
+            <p>Prensa</p>
+          </div>
+          <div class="col">
+            <p>Conferencias</p>
+          </div>
+          <div class="col">
+            <p>Términos y</p>
+            <p>condiciones</p>
+          </div>
+          <div class="col">
+            <p>Privacidad</p>
+          </div>
+          <div class="col">
+            <p>Estudiantes</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+    <!--====================================================-->
+    <!--    MI JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+  </body>
+</html>
